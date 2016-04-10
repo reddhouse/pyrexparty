@@ -37,7 +37,10 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './'
+    contentBase: './',
+
+    // Delete entire line to change back to default port 8080
+    port: process.env.PORT || 3000
   },
   plugins: [HTMLWebpackPluginConfig]
 };
