@@ -1,0 +1,22 @@
+.mainContainer {
+  background-color: lightgrey;
+}
+
+.nameBlock {
+  margin: 15px;
+  background-color: cornflowerblue;
+}
+
+.cardRow {
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+  background-color: yellow;
+}
+
+.miniBlock {
+  flex-grow: 1;
+  margin: 5px;
+  border: solid;
+  background-color: pink;
+}

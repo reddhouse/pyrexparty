@@ -24,13 +24,20 @@ module.exports = {
   },
   module: {
     // Use some loaders to make transformation to our code
-    loaders: [{
+    loaders: [
+      {
       // Specify that we will do this on any .js files, minus exclusions
       // Babel configuration needs to be setup in the .babelrc file
       test: /\.js$/,
       exclude: /node_modules/,
       loader: 'babel-loader'
-    }]
+      },
+      // The following loader is used for CSS Modules
+      {
+      test: /\.css$/,
+      loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]' 
+      }
+    ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
