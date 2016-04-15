@@ -1,3 +1,4 @@
+import styles from './group-card-list.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -15,8 +16,9 @@ class GroupCardList extends Component {
 		return this.props.groups.map((group) => {
 			const groupname = group.name;
 			const frequency = group.frequency;
+			const maxservings = group.maxservings;
 			const containersize = group.containersize;
-			const avgservingcost = group.avgservingcost;
+			const avgservingcost = group.avgservingcost.toFixed(2);
 			return (
 				<li
 					key={groupname}
@@ -24,6 +26,7 @@ class GroupCardList extends Component {
 					<GroupCard
 						groupname={groupname}
 						frequency={frequency}
+						maxservings={maxservings}
 						containersize={containersize}
 						avgservingcost={avgservingcost} />
 				</li>
@@ -34,7 +37,6 @@ class GroupCardList extends Component {
 	render() {
 		return (
 			<ul>
-				A list of group cards will go here:
 				{this.renderList()}
 			</ul>
 		);

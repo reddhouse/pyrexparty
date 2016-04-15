@@ -48,7 +48,7 @@ export default function() {
 				"UNIQUE19DIGITID0008" : true
 			},
 			"name" : "Group Number Three",
-			"avgservingcost" : 7.00,
+			"avgservingcost" : 6.50,
 			"containersize" : "2.0qt",
 			"maxservings" : 8,
 			"frequency" : 1,

@@ -6,10 +6,10 @@ export default class App extends Component {
     return (
       <div>
         <div className="Header">
-          <h2>Pyrex Party!</h2>
-          <p><i>Turn one home-cooked meal into many.</i></p>
+          <div className ="mainLogo">Pyrex Party!</div>
+          <div className="subLogo">Turn one home-cooked meal into many.</div>
         </div>
-      	{/* Children may arrive here from routes.js, automatically via 
+      	{/* Children will arrive here from routes.js, automatically via 
       		react-router so long as the routes are nested under App */}
       	{this.props.children}
         <div className="Footer">Copyright © 2016 PyrexParty, LLC</div>
