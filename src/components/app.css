@@ -1,0 +1,75 @@
+/* Divide current component into three flex columns. Content lives in the
+secondThird, and is fixed at 300px. Grow other two columns to fill space
+and grow (or fix) them at different proportions depending on media query. */
+
+/* The flex property is shorthand for <flex-grow> <flex-shrink> and 
+<flex-basis> in that order. */
+
+.mainLogo {
+	font-size: 2em;
+}
+
+.subLogo {
+	margin: 0px 0px 20px 0px;
+	font-style: italic;
+}
+
+.footer {
+	margin: 20px 0px 0px 0px;
+}
+
+@media (min-width: 380px) {
+
+	.currentComponent{
+		display: flex;
+	  flex-direction: row;
+	}
+
+	.firstThird {
+		flex: 1 0 auto;
+		max-width: 40px;
+	}
+
+	.secondThird {
+		flex: 0 0 content;
+	}
+
+	.thirdThird {
+		flex: 2 0 auto;
+	}
+}
+
+@media (min-width: 600px) {
+
+	.mainLogo {
+		margin: 0px 0px 0px 40px;
+		font-size: 2em;
+	}
+
+	.subLogo {
+		margin: 0px 0px 20px 40px;
+		font-style: italic;
+	}
+
+	.footer {
+		margin: 20px 0px 0px 40px;
+	}
+
+	.currentComponent {
+		display: flex;
+	  flex-direction: row;
+	}
+
+	.firstThird {
+		flex: 1 0 auto;
+	}
+
+	.secondThird {
+		flex: 0 0 content;
+	}
+
+	.thirdThird {
+		flex: 2 0 auto;
+		background: linear-gradient(to left, lightgrey , white);
+	}
+}
