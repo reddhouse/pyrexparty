@@ -1,3 +1,8 @@
+.link {
+  composes: superContainer from './app.css';
+  text-decoration: none;
+}
+
 .mainContainer {
   margin: 0px 0px 20px 0px;
   width: 300px;

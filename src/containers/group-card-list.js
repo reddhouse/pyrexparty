@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { takeAction } from '../actions/index';
+
 import GroupCard from '../components/group-card';
 
 class GroupCardList extends Component {
@@ -14,6 +15,7 @@ class GroupCardList extends Component {
 
 	renderList() {
 		return this.props.groups.map((group) => {
+			const groupid = group.id;
 			const groupname = group.name;
 			const frequency = group.frequency;
 			const maxservings = group.maxservings;
@@ -24,6 +26,7 @@ class GroupCardList extends Component {
 					key={groupname}
 					className="card-list-item">
 					<GroupCard
+						groupid={groupid}
 						groupname={groupname}
 						frequency={frequency}
 						maxservings={maxservings}

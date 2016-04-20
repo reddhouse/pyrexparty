@@ -5,11 +5,9 @@ import { Component } from 'react';
 export default class App extends Component {
   render() {
     return (
-      <div>
-        <div className="Header">
-          <div className ={ styles.mainLogo }>Pyrex Party!</div>
-          <div className={ styles.subLogo }>Turn one home-cooked meal into many.</div>
-        </div>
+      <div className={ styles.superContainer }>
+        <div className ={ styles.mainLogo }>Pyrex Party!</div>
+        <div className={ styles.subLogo }>Turn one home-cooked meal into many.</div>
         <div className={ styles.currentComponent }>
           <div className={ styles.firstThird }></div>
           <div className={ styles.secondThird }>

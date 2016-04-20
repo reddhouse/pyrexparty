@@ -11,7 +11,9 @@ export default function() {
 			"pastparties" : {
 				"UNIQUE19DIGITID0008" : true
 			},
-			"name" : "Group Number One",
+			"id" : 1,
+			"name" : "American Cookout Club",
+			"description" : "We cook amazing hotdogs and hamburgers. Come join the fun!",
 			"avgservingcost" : 12.00,
 			"containersize" : "2.75qt",
 			"maxservings" : 6,
@@ -29,7 +31,9 @@ export default function() {
 			"pastparties" : {
 				"UNIQUE19DIGITID0008" : true
 			},
+			"id" : 2,
 			"name" : "Group Number Two",
+			"description" : "If you love vegetables, this is the group for you. We are a mixed group of 30-40 somethings, who like to experiment with farm fresh veggies... read more.",
 			"avgservingcost" : 7.00,
 			"containersize" : "1.5qt",
 			"maxservings" : 10,
@@ -47,7 +51,9 @@ export default function() {
 			"pastparties" : {
 				"UNIQUE19DIGITID0008" : true
 			},
-			"name" : "Group Number Three",
+			"id" : 3,
+			"name" : "Southern Comfort",
+			"description" : "Come and get you a big ole helping of mashed po-taters",
 			"avgservingcost" : 6.50,
 			"containersize" : "2.0qt",
 			"maxservings" : 8,

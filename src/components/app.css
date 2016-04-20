@@ -5,6 +5,11 @@ and grow (or fix) them at different proportions depending on media query. */
 /* The flex property is shorthand for <flex-grow> <flex-shrink> and 
 <flex-basis> in that order. */
 
+.superContainer {
+	font-family: "Arial Black", Gadget, sans-serif;
+	color: #303030;
+}
+
 .mainLogo {
 	font-size: 2em;
 }
@@ -32,6 +37,7 @@ and grow (or fix) them at different proportions depending on media query. */
 
 	.secondThird {
 		flex: 0 0 content;
+		max-width: 380px;
 	}
 
 	.thirdThird {
@@ -66,6 +72,7 @@ and grow (or fix) them at different proportions depending on media query. */
 
 	.secondThird {
 		flex: 0 0 content;
+		max-width: 380px;
 	}
 
 	.thirdThird {

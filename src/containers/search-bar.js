@@ -1,14 +1,10 @@
-import styles from './welcome.css';
+import styles from './search-bar.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { takeAction } from '../actions/index';
 
-import Instructions from '../components/instructions';
-import GroupCardList from './group-card-list';
-import SearchBar from './search-bar';
-
-class Welcome extends Component {
+class SearchBar extends Component {
 	constructor(props) {
 		super(props);
 
@@ -17,10 +13,12 @@ class Welcome extends Component {
 
 	render() {
 		return (
-			<div>
-				<Instructions />
-				<SearchBar />
-				<GroupCardList />
+			<div className={ styles.mainContainer }>
+				<hr className= { styles.lineSeparator } />
+				Enter Zipcode
+				<br />
+				Groups Near You
+				<hr className= { styles.lineSeparator } />
 			</div>
 		);
 	}
@@ -42,4 +40,4 @@ function mapDispatchToProps(dispatch) {
 }
 // Glue react and redux together with the connect helper, essentially turning
 // this dumb component into a smart one (a container).
-export default connect(mapStateToProps, mapDispatchToProps)(Welcome);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
