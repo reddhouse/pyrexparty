@@ -3,6 +3,51 @@
   font-weight: 500;
 }
 
+.mainContainer > div {
+	margin: 0px 0px 6px 0px;
+}
+
+.bold {
+	font-weight: 900;
+	animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 .headingText {
 	font-weight: 700;
+}
+
+.circleContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	max-width: 300px;
+}
+
+.circle {
+	/* Apply (nested) flex properties to the very end of our node 
+	so that our content/text can be centered vertically */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	border: 1px solid #D7DBDD;
+  width: 30px;
+  height: 30px;
+  margin: 0px 2px 0px 2px;
+  border-radius: 100%;
+  box-shadow:
+    0 2px 1px rgba(#000000, 0.05),
+    0 2px 3px rgba(#000000, 0.05),
+    0 4px 8px rgba(#000000, 0.05);
+}
+
+.circleSelected {
+	color: white;
+	background-color: #303030;
 }

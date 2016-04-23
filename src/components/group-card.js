@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 
 export default (props) => (
-	<Link to={"groups/" + props.groupid} 
+	<Link to={"/groups/" + props.groupid} 
 		className={ styles.link }>
 		<div className={ styles.mainContainer }>
 			<div className={ styles.nameBlock }>
