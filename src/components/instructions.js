@@ -10,7 +10,7 @@ class Instructions extends Component {
 		super(props);
 
 		this.state = {
-			selectedCircle: 'n',
+			selectedCircle: '\'n\'',
 		};
 
 	}
@@ -44,29 +44,34 @@ class Instructions extends Component {
 	}
 
 	render() {
+		let boldClass = cx({
+				'bold' : true,
+				'boldHighlight' : this.state.selectedCircle == '\'n\'' ? false : true,
+			});
+
 		return (
 			<div className={ styles.mainContainer }>
-				<div className={ styles.headingText }>How it works:</div>
-				<div>1. Pick a number</div>
+				<div className={ styles.headingText }>How it works</div>
+				<div>1. Join a local group with...</div>
 				<div className={ styles.circleContainer }>
 					{this.renderCircles()}
 				</div>				
 				<div>
-					1. Join a local group with
-					<span className={ styles.bold }>{` ${this.state.selectedCircle} `}</span>
-					people
+					{'\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0'}...number of people (click to select)
 				</div>
 				<div>
 					2. Buy
-					<span className={ styles.bold }>{` ${this.state.selectedCircle} `}</span>
-					number of pyrex containers
+					<span className={ boldClass }>{` ${this.state.selectedCircle} `}</span>
+					pyrex containers
 				</div>
 				<div>
 					3. Cook a meal & split it into
-					<span className={ styles.bold }>{` ${this.state.selectedCircle} `}</span>
+					<span className={ boldClass }>{` ${this.state.selectedCircle} `}</span>
 					servings
 				</div>
-				<div>4. Meet in person to trade meals</div>
+				<div>
+					4. Meet in person to trade meals
+				</div>
 			</div>
 		);
 	}

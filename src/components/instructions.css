@@ -9,12 +9,10 @@
 
 .bold {
 	font-weight: 900;
-	animation: fadein 2s;
 }
 
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+.boldHighlight {
+	color: red;
 }
 
 .headingText {
@@ -45,9 +43,10 @@
     0 2px 1px rgba(#000000, 0.05),
     0 2px 3px rgba(#000000, 0.05),
     0 4px 8px rgba(#000000, 0.05);
+
 }
 
 .circleSelected {
 	color: white;
-	background-color: #303030;
+	background-color: red;
 }

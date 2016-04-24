@@ -15,10 +15,10 @@ class SearchBar extends Component {
 		return (
 			<div className={ styles.mainContainer }>
 				<hr className= { styles.lineSeparator } />
+				<i className={ "fa fa-search" }>{'\u00A0'}</i>
 				Enter Zipcode
-				<br />
-				Groups Near You
 				<hr className= { styles.lineSeparator } />
+				Groups Near You
 			</div>
 		);
 	}

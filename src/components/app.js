@@ -17,9 +17,7 @@ export default class App extends Component {
            </div>
            <div className={ styles.thirdThird }></div>
         </div>
-        <div className={ styles.footer }>
-          Copyright © 2016 PyrexParty, LLC
-        </div>
+        <div className={ styles.footer }> Copyright © 2016 PyrexParty, LLC</div>
       </div>
     );
   }
