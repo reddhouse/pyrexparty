@@ -13,7 +13,8 @@ class GroupDetails extends Component {
 	}
 
 	getGroupByID(id) {
-		const groups = this.props.groups;
+		let groupList = this.props.localGroups.length > 1 ? 'localGroups' : 'introGroups';
+		const groups = this.props[groupList];
 		const result = groups.filter(group => group.id == id);
 		return result[0];
 	}
@@ -74,7 +75,8 @@ class GroupDetails extends Component {
 
 function mapStateToProps(state) {
 	return {
-		groups: state.groups
+		introGroups: state.introGroups,
+		localGroups: state.localGroups
 	};
 }
 

@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import Groups from './reducer-groups';
+import introGroups from './reducer-groups';
+import localGroups from './reducer-local-groups';
 
 const rootReducer = combineReducers({
-	groups: Groups,
+	introGroups: introGroups,
+	localGroups: localGroups
 });
 
 export default rootReducer;

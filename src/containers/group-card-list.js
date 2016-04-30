@@ -13,8 +13,9 @@ class GroupCardList extends Component {
 		this.state = { dataLocal: null };
 	}
 
-	renderList() {
-		return this.props.groups.map((group) => {
+	renderList(groupList) {
+		// Dynamically decide which group list to access, intro or local
+		return this.props[groupList].map((group) => {
 			const groupid = group.id;
 			const groupname = group.name;
 			const frequency = group.frequency;
@@ -38,9 +39,10 @@ class GroupCardList extends Component {
 	}
 
 	render() {
+		let groupList = this.props.localGroups.length > 1 ? 'localGroups' : 'introGroups';
 		return (
 			<ul>
-				{this.renderList()}
+				{this.renderList(groupList)}
 			</ul>
 		);
 	}
@@ -50,7 +52,8 @@ function mapStateToProps(state) {
 	// Map certain parts of our APPLICATION state to props. Whatever is returned 
 	// will show up as props inside of this GroupCardList container.
 	return {
-		groups: state.groups
+		introGroups: state.introGroups,
+		localGroups: state.localGroups
 	};
 }
 // Map certain action creators to props, allowing us to kickstart the 

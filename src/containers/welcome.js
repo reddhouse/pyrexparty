@@ -28,9 +28,9 @@ class Welcome extends Component {
 
 function mapStateToProps(state) {
 	// Map certain parts of our APPLICATION state to props. Whatever is returned 
-	// will show up as props inside of this GroupCardList container.
+	// will show up as props inside of this Welcome container.
 	return {
-		groups: state.groups
+		introGroups: state.introGroups
 	};
 }
 // Map certain action creators to props, allowing us to kickstart the 
