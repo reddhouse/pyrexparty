@@ -3,8 +3,13 @@
 }
 
 .lineSeparator {
+	margin: 14px 0px 14px 0px;
  	border: 0;
   height: 1px;
   background: #333;
-  background-image: linear-gradient(to right, #333, white);
+  background-image: linear-gradient(to right, #D7DBDD, white);
+ }
+
+ .headingText {
+ 	font-weight: 700;
  }

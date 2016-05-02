@@ -53,26 +53,34 @@ class Instructions extends Component {
 
 		return (
 			<div className={ styles.mainContainer }>
-				<div className={ styles.headingText }>How it works</div>
-				<div>Join a local group with...</div>
+				<div className={ styles.headingText }>
+					How it works
+				</div>
+				<div className={ styles.iconLine}>
+					<i className={ "fa fa-spoon fa-rotate-90" }></i>
+					<span>Join a local group with...</span>
+				</div>
 				<div className={ styles.circleContainer }>
 					{this.renderCircles()}
 				</div>				
 				<div>
 					{'\u00A0 \u00A0 \u00A0 \u00A0 \u00A0 \u00A0'}...number of people (click to select)
 				</div>
-				<div>
-					Buy
+				<div className={ styles.iconLine}>
+					<i className={ "fa fa-spoon fa-rotate-90" }></i>
+					<span>Buy</span>
 					<span className={ boldClass }>{` ${this.state.selectedCircle} `}</span>
-					pyrex containers
+					<span>pyrex containers</span>
 				</div>
-				<div>
-					Cook a meal & split it into
+				<div className={ styles.iconLine}>
+					<i className={ "fa fa-spoon fa-rotate-90" }></i>
+					<span>Cook a meal & split it into</span>
 					<span className={ boldClass }>{` ${this.state.selectedCircle} `}</span>
-					servings
+					<span>servings</span>
 				</div>
-				<div>
-					Meet in person to trade meals
+				<div className={ styles.iconLine}>
+					<i className={ "fa fa-spoon fa-rotate-90" }></i>
+					<span>Meet in person to trade meals</span>
 				</div>
 			</div>
 		);

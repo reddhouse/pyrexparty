@@ -4,7 +4,12 @@
 }
 
 .mainContainer > div {
-	margin: 0px 0px 6px 0px;
+	margin: 0px 0px 8px 0px;
+}
+
+.iconLine > i {
+	display: inlineblock;
+	margin: 0px 8px 0px 8px;
 }
 
 .bold {

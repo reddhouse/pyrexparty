@@ -13,54 +13,82 @@ and grow (or fix) them at different proportions depending on media query. */
 .mainLogo {
 	font-size: 2em;
 	font-weight: 500; 
+	font-variant: small-caps;
 }
 
 .subLogo {
-	margin: 0px 0px 20px 0px;
+	padding: 0px 0px 20px 0px;
 	font-style: italic;
 }
 
 .footer {
-	margin: 20px 0px 0px 0px;
+	padding: 20px 0px 10px 8px;
+	color: white;
+	background-color: #303030;
 }
 
 @media (min-width: 321px) {
+
+	.headerContainer {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.firstThirdHeader {
+		flex: 0 0 auto;
+		max-width: 40px;
+	}
+
+	.secondThirdHeader {
+		flex: 0 0 300px;
+		max-width: 380px;
+	}
+
+	.thirdThirdHeader {
+		flex: 1 0 auto;
+	}
 
 	.currentComponent{
 		display: flex;
 	  flex-direction: row;
 	}
 
-	.firstThird {
+	.firstThirdBody {
 		flex: 1 0 auto;
 		max-width: 40px;
 	}
 
-	.secondThird {
+	.secondThirdBody {
 		flex: 0 0 content;
 		max-width: 380px;
 	}
 
-	.thirdThird {
+	.thirdThirdBody {
 		flex: 1 0 auto;
 	}
 }
 
 @media (min-width: 600px) {
 
-	.mainLogo {
-		margin: 0px 0px 0px 40px;
-		font-size: 2em;
-		font-weight: 500; 
+	.headerContainer {
+		display: flex;
+		flex-direction: row;
 	}
 
-	.subLogo {
-		margin: 0px 0px 20px 40px;
-		font-style: italic;
+	.firstThirdHeader {
+		flex: 1 0 auto;
+		max-width: none;
+		background: linear-gradient(to right, #e1e1e1 , white);
 	}
 
-	.footer {
-		margin: 20px 0px 0px 40px;
+	.secondThirdHeader {
+		flex: 0 0 300px;
+		max-width: 380px;
+	}
+
+	.thirdThirdHeader {
+		flex: 2 0 auto;
+		background: linear-gradient(to left, #cdcdcd , white);
 	}
 
 	.currentComponent {
@@ -68,17 +96,23 @@ and grow (or fix) them at different proportions depending on media query. */
 	  flex-direction: row;
 	}
 
-	.firstThird {
+	.firstThirdBody {
 		flex: 1 0 auto;
+		max-width: none;
+		background: linear-gradient(to right, #e1e1e1 , white);
 	}
 
-	.secondThird {
+	.secondThirdBody {
 		flex: 0 0 content;
 		max-width: 380px;
 	}
 
-	.thirdThird {
-		flex: 1 0 auto;
-		background: linear-gradient(to left, lightgrey , white);
+	.thirdThirdBody {
+		flex: 2 0 auto;
+		background: linear-gradient(to left, #cdcdcd , white);
+	}
+
+	.footer {
+	padding: 20px 0px 10px 40px;
 	}
 }

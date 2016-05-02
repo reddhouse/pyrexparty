@@ -106,7 +106,9 @@ class SearchBar extends Component {
 					</span>
 				</form>
 				<hr className= { styles.lineSeparator } />
-				Groups Near You
+				<div className= {styles.headingText}>
+					Groups Near You
+				</div>
 			</div>
 		);
 	}
