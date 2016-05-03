@@ -21,6 +21,8 @@
 }
 
 .headingText {
+	padding: 0px 0px 0px 3px;
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	font-weight: 700;
 }
 

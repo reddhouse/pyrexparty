@@ -8,7 +8,10 @@ import reducers from './reducers';
 import routes from './routes';
 import ReduxPromise from 'redux-promise';
 
-const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
+// Force all of our actions to flow through the Redux Promise middleware
+const createStoreWithMiddleware = applyMiddleware(
+	ReduxPromise
+)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>

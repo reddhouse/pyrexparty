@@ -1,5 +1,6 @@
 .mainContainer {
 	margin: 0px 0px 20px 0px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .lineSeparator {
@@ -11,5 +12,6 @@
  }
 
  .headingText {
+ 	font-family: Montserrat, Arial, Helvetica, sans-serif;
  	font-weight: 700;
  }

@@ -9,7 +9,10 @@ export default class App extends Component {
         <div className={ styles.headerContainer }>
           <div className={ styles.firstThirdHeader }></div>
           <div className={ styles.secondThirdHeader }>
-            <div className ={ styles.mainLogo }>Pyrex Party!</div>
+            <div className ={ styles.mainLogo }>
+              <span>Pyrex </span>
+              <span className={ styles.rainbow }>Party!</span>
+            </div>
             <div className={ styles.subLogo }>Turn one home-cooked meal into many.</div>
           </div>
           <div className={ styles.thirdThirdHeader }></div>

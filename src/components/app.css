@@ -6,17 +6,28 @@ and grow (or fix) them at different proportions depending on media query. */
 <flex-basis> in that order. */
 
 .superContainer {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	color: #303030;
 }
 
 .mainLogo {
 	font-size: 2em;
-	font-weight: 500; 
-	font-variant: small-caps;
+	font-weight: 500;
+	/*font-variant: small-caps;*/
+}
+
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.143, #f2f), color-stop(0.286, #22f), color-stop(0.429, #2ff), color-stop(0.571, #2f2),color-stop(0.714, #2f2), color-stop(0.857, #ff2), color-stop(1, #f22) );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: .5px black;
 }
 
 .subLogo {
+	font-family: Arial, Helvetica, sans-serif;
+	width: 300px;
 	padding: 0px 0px 20px 0px;
 	font-style: italic;
 }
@@ -29,6 +40,10 @@ and grow (or fix) them at different proportions depending on media query. */
 
 @media (min-width: 321px) {
 
+	.mainLogo {
+		margin: 10px 0px 0px 0px;
+	}
+
 	.headerContainer {
 		display: flex;
 		flex-direction: row;
@@ -40,7 +55,7 @@ and grow (or fix) them at different proportions depending on media query. */
 	}
 
 	.secondThirdHeader {
-		flex: 0 0 300px;
+		flex: 0 0 content;
 		max-width: 380px;
 	}
 
@@ -78,17 +93,17 @@ and grow (or fix) them at different proportions depending on media query. */
 	.firstThirdHeader {
 		flex: 1 0 auto;
 		max-width: none;
-		background: linear-gradient(to right, #e1e1e1 , white);
+		background: linear-gradient(to right, #f4f4f4 , white);
 	}
 
 	.secondThirdHeader {
-		flex: 0 0 300px;
+		flex: 0 0 content;
 		max-width: 380px;
 	}
 
 	.thirdThirdHeader {
 		flex: 2 0 auto;
-		background: linear-gradient(to left, #cdcdcd , white);
+		background: linear-gradient(to left, #e1e1e1, white);
 	}
 
 	.currentComponent {
@@ -99,7 +114,7 @@ and grow (or fix) them at different proportions depending on media query. */
 	.firstThirdBody {
 		flex: 1 0 auto;
 		max-width: none;
-		background: linear-gradient(to right, #e1e1e1 , white);
+		background: linear-gradient(to right, #f4f4f4 , white);
 	}
 
 	.secondThirdBody {
@@ -109,10 +124,10 @@ and grow (or fix) them at different proportions depending on media query. */
 
 	.thirdThirdBody {
 		flex: 2 0 auto;
-		background: linear-gradient(to left, #cdcdcd , white);
+		background: linear-gradient(to left, #e1e1e1 , white);
 	}
 
 	.footer {
-	padding: 20px 0px 10px 40px;
+		padding: 20px 0px 10px 40px;
 	}
 }
